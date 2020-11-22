@@ -57,7 +57,7 @@ export class UserResolver {
       };
     }
 
-    if (username.length <= 2) {
+    if (username.length >= 2) {
       const hashedPassword = await argon2.hash(password);
       const userExists = await em.findOne(User, { username });
 
