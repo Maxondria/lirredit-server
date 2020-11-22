@@ -3,6 +3,7 @@ import { Request, Response } from "express";
 
 type Session = {
   userId?: number;
+  destroy?: (callback: Function) => Promise<boolean>;
 };
 
 export type MyContext = {
